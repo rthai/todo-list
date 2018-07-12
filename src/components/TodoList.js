@@ -4,7 +4,12 @@ import Todo from './Todo';
 
 const TodoList = (props) => (
   <ol>
-    {props.todos.map( (todo, index) => <Todo/>
+    {props.todos.map( (todo, index) => 
+      <Todo 
+        todo={todo}
+        index={index}
+        key={index}
+      />
     )}
   </ol>
 );
