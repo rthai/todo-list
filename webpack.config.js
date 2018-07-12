@@ -1,4 +1,5 @@
 module.exports = {
+  devtool: 'inline-sourcemap',
   entry: './index.js',
   output: {
     filename: 'bundle.js'
@@ -16,3 +17,6 @@ module.exports = {
     ]
   }
 };
+
+// webpack 4 default entry is src/index.js
+// webpack 4 default output is dist/main.js
