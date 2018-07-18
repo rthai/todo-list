@@ -9,6 +9,7 @@ import { connect } from 'react-redux';
 
 import * as TodoListActionCreators from '../actions/todoList';
 import TodoList from '../components/TodoList';
+import AddTodoForm from '../components/AddTodoForm';
 
 class App extends Component {
 
@@ -22,7 +23,15 @@ class App extends Component {
     const updateTodo = bindActionCreators(TodoListActionCreators.updateTodo, dispatch);
 
     return (
-      <TodoList todos={todos}/>
+      <div className="app">
+        <h1>TODOS</h1>
+        <AddTodoForm addTodo={addTodo}/>
+        <TodoList 
+          todos={todos}
+          removeTodo={removeTodo}
+          updateTodo={updateTodo}
+        />
+      </div>
     );
   }
 }
