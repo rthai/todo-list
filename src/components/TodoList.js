@@ -3,15 +3,16 @@ import React from 'react';
 import Todo from './Todo';
 
 const TodoList = (props) => (
-  <ol>
+  <ul>
     {props.todos.map( (todo, index) => 
       <Todo 
         todo={todo}
         index={index}
         key={index}
+        removeTodo={props.removeTodo}
       />
     )}
-  </ol>
+  </ul>
 );
 
 export default TodoList;
